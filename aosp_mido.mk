@@ -21,15 +21,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mido device
 $(call inherit-product, device/xiaomi/mido/device.mk)
 
-# Inherit some common StagOS stuff.
-$(call inherit-product, vendor/stag/main.mk)
+# Inherit some common AOSP stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# Inherit PEX Stuff
+# GAPPS
+TARGET_GAPPS_ARCH := arm64
+
+# Pixel Experience targets
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
+#Boot Animation res
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
 # Mido bootanimation flag
 TARGET_SCREEN_RES := 1080
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
-PRODUCT_NAME := stag_mido
+PRODUCT_NAME := aosp_mido
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 4
 PRODUCT_MANUFACTURER := Xiaomi

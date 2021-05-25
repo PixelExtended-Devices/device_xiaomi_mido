@@ -6,9 +6,9 @@
     "remote":      "github"
   },
   {
-    "repository":  "shashank1436/vendor_xiaomi-mido",
+    "repository":  "AryanKedare/proprietary_vendor_xiaomi",
     "target_path": "vendor/xiaomi",
-    "branch":      "r11",
+    "branch":      "pe-latest",
     "remote":      "github"
   },
   {
